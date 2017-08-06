@@ -1,0 +1,48 @@
+<!DOCUMENTTYPE HTML>
+	<html>
+<head>
+<title>Assignment6.1</title>
+</head>
+
+
+<h1> This is Assignment 6.1</h1>
+<h2> <b>Assignment:</b></h2> Input the basic salary of an employee and validate if the employee salary greater than equals to 15000 and working_hr daily more than 10 hours. Then add 10% bonus to its basic salary and display the basic salary with bonus. Else add 5% bonus to its basic salary and display the result in a div box.<br>
+<style type="text/css">
+div{
+	width: 250px;
+	height: 50px;
+	background-color: green;
+}
+</style>
+	
+	<script language="JavaScript">
+	/* Calculating Bonus */
+	 function salarybonus(){
+        var salary =document.form1.txtsalary.value;
+        var hours =document.form1.txthours.value;
+        var updated=document.value; 
+        if ((salary>=15000) && (hours>=10)){
+        	updated = salary + 0.1*salary;
+        	document.write("<div>Bonus is " +0.1*salary+"</div>");
+    
+        } else {
+        	updated= salary + salary*0.05;
+        	document.write("<div width:60px; height:20px;>Bonus is " +0.05*salary+"</div>");
+    
+        }
+       
+    }
+	</script>
+	 <form name=form1> <!-- Enter the salary and work hours -->
+        Enter Basic salary of the employee:
+       <input type="text" name="txtsalary" size=10>
+       <br>
+       Enter the working hours:
+       <input type="text" name="txthours" size=10>
+       <br>
+       <input type="button" value="Calculate" onClick='salarybonus();'>  
+    </form>
+</script>
+
+</body>
+</html>
